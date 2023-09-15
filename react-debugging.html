@@ -64,16 +64,13 @@
         }
         // No need to change anything ABOVE this line ^
 
-        return (
+        return ( 
+          //added a opening and closing div, added drawCard function and changed shuffle button onclick to onClick
+        <div>
           <h1>Draw a Card</h1>
-          <button onClick={}>
-            Click to Draw a Card
-          </button>
-          <button onclick={shuffle}>
-            Return Cards and Shuffle Deck
-          </button>
-          <div style={handStyles}>
-            {hand.map((card, index) => {
+            <button onClick={drawCard}>Click to Draw a Card</button>
+            <button onClick={shuffle}>Return Cards and Shuffle Deck</button>
+              <div style={handStyles}>{hand.map((card, index) => {
               return (
                 <div style={cardStyles} key={index}>
                   {card}
@@ -81,6 +78,7 @@
               )
             })}
           </div>
+        </div>
         )
       }
 
